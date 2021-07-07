@@ -46,7 +46,7 @@ lr.surv.pval <- function(time, event, covariate, data){
     colnames(tab) <- c("variable","pval")
   }
   tab <- as.data.frame(tab)
-  tab[,2] <- as.numeric(tab[,2])
+  tab[,2] <- as.numeric(as.character(tab[,2]))
   return(tab)
 }
 
